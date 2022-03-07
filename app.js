@@ -7,7 +7,7 @@ app.use(express.json());
 app.post("/api",async(req,res)=>{
     const city=req.body.city;
     
-    const resp=await fetch(`http://api.weatherapi.com/v1?key=84656578ef6545b0b7c163542220703?q=${city}`);
+    const resp=await fetch(`https://api.weatherapi.com/v1?key=84656578ef6545b0b7c163542220703?q=${city}`);
     const data=await resp.json();
     res.send(data);
 })
